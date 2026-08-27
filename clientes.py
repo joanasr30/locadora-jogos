@@ -30,6 +30,5 @@ def listar_clientes(clientes):
     else:
 
         for cliente in clientes:
-            print("-------------------------")
             print("Nome:", cliente["nome"])
             print("Telefone:", cliente["telefone"])
