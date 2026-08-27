@@ -1,43 +1,35 @@
 import persistencia
 
 
-def cadastrar_jogo(jogos):
+def cadastrar_cliente(clientes):
 
-    print("\n--- CADASTRAR JOGO ---")
+    print("\n--- CADASTRAR CLIENTE ---")
 
-    titulo = input("Digite o título do jogo: ")
-    plataforma = input("Digite a plataforma: ")
-    genero = input("Digite o gênero: ")
-    valor = float(input("Digite o valor da diária: R$ "))
-    copias = int(input("Digite a quantidade de cópias: "))
+    nome = input("Digite o nome do cliente: ")
+    telefone = input("Digite o telefone: ")
 
-    jogo = {
-        "titulo": titulo,
-        "plataforma": plataforma,
-        "genero": genero,
-        "valor": valor,
-        "copias": copias
+    cliente = {
+        "nome": nome,
+        "telefone": telefone
     }
 
-    jogos.append(jogo)
+    clientes.append(cliente)
 
-    persistencia.salvar("jogos.json", jogos)
+    persistencia.salvar("clientes.json", clientes)
 
-    print("Jogo cadastrado!")
+    print("Cliente cadastrado!")
 
 
-def listar_jogos(jogos):
+def listar_clientes(clientes):
 
-    print("\n--- JOGOS CADASTRADOS ---")
+    print("\n--- CLIENTES CADASTRADOS ---")
 
-    if len(jogos) == 0:
-        print("Nenhum jogo cadastrado.")
+    if len(clientes) == 0:
+        print("Nenhum cliente cadastrado.")
+
     else:
 
-        for jogo in jogos:
+        for cliente in clientes:
             print("-------------------------")
-            print("Título:", jogo["titulo"])
-            print("Plataforma:", jogo["plataforma"])
-            print("Gênero:", jogo["genero"])
-            print("Valor por dia: R$", jogo["valor"])
-            print("Cópias disponíveis:", jogo["copias"])
+            print("Nome:", cliente["nome"])
+            print("Telefone:", cliente["telefone"])
