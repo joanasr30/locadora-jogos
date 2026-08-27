@@ -35,7 +35,6 @@ def listar_jogos(jogos):
     else:
 
         for jogo in jogos:
-            print("-------------------------")
             print("Título:", jogo["titulo"])
             print("Plataforma:", jogo["plataforma"])
             print("Gênero:", jogo["genero"])
